@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A conversion-focused supplement funnel prototype with presell, offer, upsell, order bump, and checkout states." />
+    <title>CalmFuel | Checkout Funnel Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="CalmFuel home"><span class="brand-mark">C</span> CalmFuel</a>
+      <div class="secure-note"><span aria-hidden="true">🔒</span> Secure demo checkout</div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">A 14-day reset for busy builders</p>
+          <h1>Clear mornings start with a calmer evening.</h1>
+          <p class="hero-lede">CalmFuel is a simple nightly drink mix designed for people who want a steadier wind-down without another complicated routine.</p>
+          <div class="hero-actions">
+            <button class="primary-button js-scroll-offer" type="button">See the starter offer <span aria-hidden="true">↓</span></button>
+            <a class="text-link" href="#how-it-works">How it works</a>
+          </div>
+          <div class="proof-row" aria-label="Customer proof">
+            <div class="avatars" aria-hidden="true"><span>MK</span><span>LA</span><span>JT</span><span>+2k</span></div>
+            <p><strong>4.9/5</strong> from 2,000+ early customers</p>
+          </div>
+        </div>
+        <div class="product-art" aria-label="CalmFuel product illustration" role="img">
+          <div class="glow"></div>
+          <div class="jar"><span>CALM<br /><b>FUEL</b></span><small>nightly mix</small></div>
+          <div class="leaf leaf-one"></div><div class="leaf leaf-two"></div>
+          <div class="floating-card card-one"><strong>14</strong><span>night reset</span></div>
+          <div class="floating-card card-two"><strong>0g</strong><span>added sugar</span></div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="trust-strip">
+        <div><span class="trust-icon">✓</span><strong>Easy nightly ritual</strong><small>Mix, sip, unwind</small></div>
+        <div><span class="trust-icon">↻</span><strong>30-day guarantee</strong><small>Love it or get a refund</small></div>
+        <div><span class="trust-icon">⚡</span><strong>Ships in 24 hours</strong><small>Free US shipping</small></div>
+      </section>
+
+      <section class="benefits section-shell">
+        <div class="section-heading"><p class="eyebrow">Built for conversion</p><h2>One focused offer. No clutter.</h2><p>Every block answers a question, removes friction, or helps a customer make a confident decision.</p></div>
+        <div class="benefit-grid">
+          <article><span class="benefit-number">01</span><h3>Wind down without guesswork</h3><p>A clear two-minute routine that fits around a real schedule.</p></article>
+          <article><span class="benefit-number">02</span><h3>Ingredients you can recognize</h3><p>Magnesium glycinate, L-theanine, and tart cherry in a clean formula.</p></article>
+          <article><span class="benefit-number">03</span><h3>A small habit with a signal</h3><p>Track your evening consistency and notice what helps you feel ready for tomorrow.</p></article>
+        </div>
+      </section>
+
+      <section id="offer" class="offer-section section-shell">
+        <div class="offer-intro"><p class="eyebrow">Limited starter run</p><h2>Try the 14-night reset.</h2><p>Start with one pouch and decide after you have experienced the ritual yourself.</p><ul class="check-list"><li>14 individual nightly servings</li><li>Free shaker and recipe card</li><li>30-day satisfaction guarantee</li></ul></div>
+        <div class="checkout-card" id="checkout">
+          <div class="stepper" aria-label="Checkout progress"><span class="active">1</span><i></i><span>2</span><i></i><span>3</span></div>
+          <div class="price-line"><div><span class="label">Starter pouch</span><span class="muted">14 servings · one-time purchase</span></div><strong>$29</strong></div>
+          <div class="order-bump"><label><input id="order-bump" type="checkbox" /> <span><strong>Add the travel tin</strong><small>Keep the ritual in your bag · +$9</small></span></label><span class="bump-tag">Most added</span></div>
+          <div class="total-line"><span>Total today</span><strong id="total">$29</strong></div>
+          <button class="primary-button full-width" id="start-checkout" type="button">Continue to secure checkout <span aria-hidden="true">→</span></button>
+          <p class="microcopy">No subscription. No hidden fees. Demo only — no real payment is processed.</p>
+        </div>
+      </section>
+
+      <section class="faq section-shell"><div class="section-heading"><p class="eyebrow">Questions, answered</p><h2>Make the next step obvious.</h2></div><div class="faq-list"><details open><summary>When will it ship?</summary><p>Orders are packed within one business day. This prototype uses a simulated fulfillment message.</p></details><details><summary>Is this a subscription?</summary><p>No. The starter pouch is a one-time purchase. A replenishment option could be added later.</p></details><details><summary>What is the guarantee?</summary><p>Try it for 30 nights. If it is not a fit, contact support for a refund.</p></details></div></section>
+    </main>
+
+    <footer class="site-footer"><div><strong>CalmFuel</strong><span>Conversion funnel prototype by Giorgi Kemoklidze</span></div><span>Demo checkout · no real payment processing</span></footer>
+
+    <div class="modal-backdrop" id="checkout-modal" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="close-modal" type="button" aria-label="Close checkout">×</button>
+        <div class="modal-progress"><span class="active"></span><span></span><span></span></div>
+        <p class="eyebrow">Step 2 of 3</p><h2 id="modal-title">Where should we send your reset?</h2><p class="muted">This is a functional demo form. It never charges a card or sends an order.</p>
+        <form id="demo-form"><label>Full name<input name="name" required autocomplete="name" placeholder="Alex Morgan" /></label><label>Email<input name="email" type="email" required autocomplete="email" placeholder="alex@example.com" /></label><label>Country<select name="country"><option>United States</option><option>Georgia</option><option>United Kingdom</option><option>Spain</option></select></label><button class="primary-button full-width" type="submit">Review order <span aria-hidden="true">→</span></button></form>
+        <div class="success-state" id="success-state" hidden><div class="success-icon">✓</div><h3>Order review ready</h3><p>Your funnel handoff is complete. In a production build, the next step would pass the validated payload to the payment provider.</p><button class="secondary-button" id="close-success" type="button">Back to offer</button></div>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
